@@ -45,13 +45,16 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div>
+            <div className='pb-20'>
                 <h1 className='text-5xl font-bold text-[#1d7edd] text-center mb-5'>Gallery</h1>
                 <div className='grid grid-cols-3 w-fit mx-auto gap-5'>
                     {
                         toys.map(toy => <div toy={toy} key={toy.id}><img src={toy.photo} alt="" /></div>)
                     }
                 </div>
+            </div>
+            <div>
+                <h1 className='text-5xl font-bold text-[#1d7edd] text-center mb-5'>Shop by Category</h1>
             </div>
         </div>
     );
