@@ -15,6 +15,11 @@ const Home = () => {
             .then(data => setToys(data))
             .catch(error => console.log(error))
     }, [])
+
+    const [buttonText, setButtonText] = useState("+");
+    const handleButtonClick = () => {
+        setButtonText(prevText => (prevText === "+" ? "-" : "+"));
+    };
     return (
         <div>
             <div className='h-fit bg-[url(/public/banner.jpg)] bg-no-repeat bg-center bg-cover pt-36'>
@@ -22,9 +27,9 @@ const Home = () => {
                     <h1 className='text-7xl pb-8'>We only sell best <br /> quality toy cars in <br /> our shop</h1>
                     <p>Download our official app</p>
                     <div className='flex gap-5 pt-3 pb-20'>
-                        <button className='flex items-center bg-[#2cae74] text-black px-4 py-2 font-bold rounded-lg'><GrApple className='text-2xl mr-1' />Download</button>
-                        <button className='flex items-center bg-[#2cae74] text-black px-4 py-2 font-bold rounded-lg'><AiFillWindows className='text-2xl mr-1' />Download</button>
-                        <button className='flex items-center bg-[#2cae74] text-black px-4 py-2 font-bold rounded-lg'><AiFillAndroid className='text-2xl mr-1' />Download</button>
+                        <button className='flex items-center bg-[#2cae74] text-black px-4 py-2 font-bold rounded'><GrApple className='text-2xl mr-1' />Download</button>
+                        <button className='flex items-center bg-[#2cae74] text-black px-4 py-2 font-bold rounded'><AiFillWindows className='text-2xl mr-1' />Download</button>
+                        <button className='flex items-center bg-[#2cae74] text-black px-4 py-2 font-bold rounded'><AiFillAndroid className='text-2xl mr-1' />Download</button>
                     </div>
                 </div>
             </div>
@@ -51,7 +56,7 @@ const Home = () => {
                 <h1 className='text-5xl font-bold text-[#1d7edd] text-center mb-5'>Gallery</h1>
                 <div className='grid grid-cols-3 w-3/4 mx-auto gap-5'>
                     {
-                        toys.map(toy => <Gallery toy={toy} key={toy.id}></Gallery>)                       
+                        toys.map(toy => <Gallery toy={toy} key={toy.id}></Gallery>)
                     }
                 </div>
             </div>
@@ -59,6 +64,86 @@ const Home = () => {
                 <h1 className='text-5xl font-bold text-[#1d7edd] text-center'>Shop by Category</h1>
                 <div className='w-3/4 mx-auto'>
                     <Category></Category>
+                </div>
+            </div>
+            <div className='mb-20'>
+                <h1 className='text-5xl font-bold text-[#1d7edd] text-center mb-5'>FAQ Section</h1>
+                <div className='flex gap-10 w-3/4 mx-auto'>
+                    <div className='w-3/4 mx-auto flex flex-col gap-5 mt-7'>
+                        <div className='w-full mx-auto border-2 border-slate-200'>
+                            <div className="collapse">
+                                <input type="checkbox" />
+                                <div className="collapse-title text-xl font-medium flex justify-between">
+                                    <div>
+                                        Can I find remote-controlled toy cars at your shop?
+                                    </div>
+                                    <button onClick={handleButtonClick}>{buttonText}</button>
+                                </div>
+                                <div className="collapse-content">
+                                    <p>Yes, we offer a wide range of remote-controlled toy cars in various sizes, models, and brands. You'll find both beginner-friendly options and advanced models for enthusiasts.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='w-full mx-auto border-2 border-slate-200'>
+                            <div className="collapse">
+                                <input type="checkbox" />
+                                <div className="collapse-title text-xl font-medium flex justify-between">
+                                    <div>
+                                        Are your toy cars suitable for children of all ages?
+                                    </div>
+                                    <button onClick={handleButtonClick}>{buttonText}</button>
+                                </div>
+                                <div className="collapse-content">
+                                    <p>Our toy cars are designed for different age groups, ranging from toddlers to older children and even collectors. Each product description includes age recommendations and safety guidelines to ensure an appropriate match for your child's age and skill level.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='w-full mx-auto border-2 border-slate-200'>
+                            <div className="collapse">
+                                <input type="checkbox" />
+                                <div className="collapse-title text-xl font-medium flex justify-between">
+                                    <div>
+                                        Do you carry spare parts for toy cars?
+                                    </div>
+                                    <button onClick={handleButtonClick}>{buttonText}</button>
+                                </div>
+                                <div className="collapse-content">
+                                    <p>Absolutely! We understand that accidents happen, and components can wear out. We stock a variety of spare parts, including batteries, tires, remote controllers, and other essential components, to help you maintain and repair your toy cars.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='w-full mx-auto border-2 border-slate-200'>
+                            <div className="collapse">
+                                <input type="checkbox" />
+                                <div className="collapse-title text-xl font-medium flex justify-between">
+                                    <div>
+                                        Can I return or exchange a toy car if it's not what I expected?
+                                    </div>
+                                    <button onClick={handleButtonClick}>{buttonText}</button>
+                                </div>
+                                <div className="collapse-content">
+                                    <p>We have a hassle-free return and exchange policy. If you're not satisfied with your purchase, you can return it within [X] days in its original condition and packaging for a refund or exchange. Please refer to our return policy for detailed instructions.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='w-full mx-auto border-2 border-slate-200'>
+                            <div className="collapse">
+                                <input type="checkbox" />
+                                <div className="collapse-title text-xl font-medium flex justify-between">
+                                    <div>
+                                        Do you offer gift-wrapping services for toy car purchases?
+                                    </div>
+                                    <button onClick={handleButtonClick}>{buttonText}</button>
+                                </div>
+                                <div className="collapse-content">
+                                    <p>Yes, we provide complimentary gift-wrapping services for toy car purchases. Just let our friendly staff know that it's a gift, and they will ensure that it's beautifully wrapped and ready to be presented. We take pride in adding that extra touch to make your gift-giving experience special.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className=''>
+                        <img src="/public/faq.svg" alt="" />
+                    </div>
                 </div>
             </div>
         </div>
