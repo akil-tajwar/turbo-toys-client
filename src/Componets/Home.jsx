@@ -4,6 +4,8 @@ import { GiHandOk } from 'react-icons/gi';
 import { MdHandyman } from 'react-icons/md';
 import { FaUserFriends } from 'react-icons/fa';
 import { AiFillAndroid, AiFillWindows } from 'react-icons/ai';
+import Gallery from './Gallery';
+import Category from './Category';
 
 const Home = () => {
     const [toys, setToys] = useState([]);
@@ -47,14 +49,17 @@ const Home = () => {
             </div>
             <div className='pb-20'>
                 <h1 className='text-5xl font-bold text-[#1d7edd] text-center mb-5'>Gallery</h1>
-                <div className='grid grid-cols-3 w-fit mx-auto gap-5'>
+                <div className='grid grid-cols-3 w-3/4 mx-auto gap-5'>
                     {
-                        toys.map(toy => <div toy={toy} key={toy.id}><img src={toy.photo} alt="" /></div>)
+                        toys.map(toy => <Gallery toy={toy} key={toy.id}></Gallery>)                       
                     }
                 </div>
             </div>
             <div>
-                <h1 className='text-5xl font-bold text-[#1d7edd] text-center mb-5'>Shop by Category</h1>
+                <h1 className='text-5xl font-bold text-[#1d7edd] text-center'>Shop by Category</h1>
+                <div className='w-3/4 mx-auto'>
+                    <Category></Category>
+                </div>
             </div>
         </div>
     );
