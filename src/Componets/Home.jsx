@@ -4,6 +4,8 @@ import { GiHandOk } from 'react-icons/gi';
 import { MdHandyman } from 'react-icons/md';
 import { FaUserFriends } from 'react-icons/fa';
 import { AiFillAndroid, AiFillWindows } from 'react-icons/ai';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 import Gallery from './Gallery';
 import Category from './Category';
 
@@ -20,10 +22,13 @@ const Home = () => {
     const handleButtonClick = () => {
         setButtonText(prevText => (prevText === "+" ? "-" : "+"));
     };
+    useEffect(()=> {
+        Aos.init({duration: 2000});
+    }, [])
     return (
         <div>
-            <div className='h-fit bg-[url(/public/banner.jpg)] bg-no-repeat bg-center bg-cover pt-36'>
-                <div className='w-3/4 mx-auto px-5 py-40 text-white'>
+            <div data-aos="fade-down" className='h-fit bg-[url(/public/banner.jpg)] bg-no-repeat bg-center bg-cover pt-36'>
+                <div data-aos="fade-right" className='w-3/4 mx-auto px-5 py-40 text-white'>
                     <h1 className='lg:text-7xl text-5xl w-2/3 lg:w-1/4 pb-8'>We only sell best quality toy cars in our shop</h1>
                     <p>Download our official app</p>
                     <div className='grid lg:grid-cols-3 grid-cols-2 w-fit gap-5 pt-3 pb-20'>
@@ -33,7 +38,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className='w-3/4 mx-auto text-center py-20'>
+            <div data-aos="fade-up" className='w-3/4 mx-auto text-center py-20'>
                 <div className='flex lg:flex-row flex-col lg:text-center lg:gap-5 gap-8'>
                     <div className='mx-auto flex flex-col justify-center items-center'>
                         <GiHandOk className='text-6xl text-[#2cae74]' />
@@ -52,7 +57,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className='pb-20'>
+            <div data-aos="fade-up" className='pb-20'>
                 <h1 className='text-5xl font-bold text-[#1d7edd] text-center mb-5'>Gallery</h1>
                 <div className='grid lg:grid-cols-3 grid-cols-2 w-11/12 lg:w-3/4 mx-auto gap-5'>
                     {
@@ -69,7 +74,7 @@ const Home = () => {
             <div className='mb-20'>
                 <h1 className='text-5xl font-bold text-[#1d7edd] text-center mb-5'>FAQ Section</h1>
                 <div className='flex lg:flex-row flex-col-reverse gap-10 w-11/12 lg:w-3/4 mx-auto'>
-                    <div className='w-11/12 lg:w-3/4 mx-auto flex flex-col gap-5 mt-7'>
+                    <div data-aos="fade-right" className='w-11/12 lg:w-3/4 mx-auto flex flex-col gap-5 mt-7'>
                         <div className='w-full mx-auto border-2 border-slate-200'>
                             <div className="collapse">
                                 <input type="checkbox" />
@@ -141,7 +146,7 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className=''>
+                    <div data-aos="fade-left" className=''>
                         <img src="/public/faq.svg" alt="" />
                     </div>
                 </div>

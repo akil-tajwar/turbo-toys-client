@@ -28,7 +28,7 @@ const Category = () => {
                 </TabList>
 
                 <TabPanel>
-                    <div className='flex gap-5 lg:flex-row flex-col'>
+                    <div data-aos="fade-up" className='flex gap-5 lg:flex-row flex-col'>
                         {categories[0].category.map(toy => (
                             <div className='border w-full border-slate-400 mt-3'>
                                 <div className='flex lg:flex-row flex-col'>
