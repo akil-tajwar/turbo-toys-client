@@ -1,4 +1,5 @@
-import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
+import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+
 import React, { createContext, useEffect, useState } from 'react';
 import app from '../firebase/firebase.init';
 
