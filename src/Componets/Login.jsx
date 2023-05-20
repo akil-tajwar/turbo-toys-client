@@ -1,7 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import app from '../firebase/firebase.init';
 
 const Login = () => {
+    const [user, setUser] = useState({});
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider();
+    const googleLogin = () => {
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                const user = result.user;
+                setUser(user);
+                console.log(user);
+            })
+            .catch((error) => {
+                console.log(error.message);
+            });
+    }
     return (
         <div className='pt-52'>
             <div className='mx-auto w-fit border-slate-200 border p-8 mt-20 mb-4'>
@@ -19,7 +35,7 @@ const Login = () => {
                 </form>
                 <p className='text-center'>--------- or ---------</p>
                 <div className='flex gap-2 mb-3'>
-                    <button className='w-full bg-[#2cae74] p-2 mt-3'>Google</button>
+                    <button onClick={googleLogin} className='w-full bg-[#2cae74] p-2 mt-3'>Google</button>
                 </div>
                 <div className='text-center'>
                     <small>New to Turbo Toy Car? <Link to='/signup' className='text-[#1d7edd] font-semibold'>Create new account</Link></small>
