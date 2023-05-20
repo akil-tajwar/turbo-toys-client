@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from './AuthProvider';
 
 const Navbar = () => {
+    const {user} = useContext(AuthContext);
     return (
         <div className='bg-[#0a151e] fixed w-full z-10'>
             <div className='flex justify-between w-3/4 mx-auto p-5'>
