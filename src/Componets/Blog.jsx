@@ -2,29 +2,31 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div className='pt-52 mb-20 w-11/12 lg:w-3/4 mx-auto'>
+        <div className='lg:pt-52 pt-60 mb-20 w-11/12 lg:w-3/4 mx-auto'>
             <div className='text-center'>
-                <h1 className='font-semibold text-4xl text-[#78bf4d]'>Question/Answer</h1>
+                <h1 className='font-semibold text-5xl text-[#1d7edd]'>Question/Answer</h1>
             </div>
             <div className='p-6'>
                 <div className='pt-8'>
-                    <b className='text-[#fc834b] font-bold'>Ques 1: What&apos;s the differences between uncontrolled and controlled components?</b>
-                    <p className='pt-2 text-justify'><b>Uncontrolled Components:</b> In uncontrolled components the input values are stored in the DOM, not in React state. With this component, we can read the input values from the DOM using a ref and then perform some action with those values. Uncontrolled components are often used in cases where we don&apos;t need to validate the input, or if you have a simple form with a few inputs. <br />
-                        <b>Controlled Components: </b>In controlled components the input values are stored in React state, and any changes to the input values are handled by React. With this component, we can validate the input values, perform some action on each change, or manage the state of the input in a more complex way. Controlled components are often used in cases where we need to validate the input or if we have a complex form with many inputs.</p>
+                    <b className='text-[#2cae74] font-bold'>Ques 1: What is an access token and refresh token? How do they work and where should we store them on the client-side?</b>
+                    <p className='pt-2 text-justify'><b>Access Token:</b> An access token is a short-lived credential that authorizes a client to access specific resources. It is used for authenticating and authorizing API requests. <br />
+                        <b>Refresh Token: </b>A refresh token is a long-lived credential that is used to obtain a new access token after the current one expires. It allows the user to obtain a new access token without re-entering their credentials. <br />
+                        Access tokens are typically stored in memory or browser storage, while refresh tokens should be stored securely, such as in HttpOnly cookies or secure storage mechanisms provided by frameworks.</p>
                 </div>
                 <div className='pt-8'>
-                    <b className='text-[#fc834b] font-bold'>Ques 2: How to validate React props using PropTypes?</b>
-                    <p className='pt-2 text-justify'>To use PropTypes in our React project, we will need to install the prop-types package from NPM. The command line is &apos;npm install prop-types&apos;. Then, we can import it into our component and define our prop types using the propTypes property. When a prop of the wrong type is passed to your component, we will see a warning in the console, which can help us catch errors early on in the development process.</p>
+                    <b className='text-[#2cae74] font-bold'>Ques 2: Compare SQL and NoSQL databases?</b>
+                    <p className='pt-2 text-justify'><b>SQL Database : <br /> </b>1. Structured, with predefined schemas and relations. <br /> 2. Follow the relational data model. <br /> 3. Fixed schema and SQL query language. <br /> 4. Vertically scalable and provide ACID compliance. <br />
+                    <b>NoSQL Database : </b> <br /> 1. Flexible, with dynamic and unstructured data. <br /> 2. Offer various data models. <br /> 3. No fixed schema and may have their own query languages. <br /> 4. Horizontally scalable and may sacrifice ACID properties for scalability.</p>
                 </div>
                 <div className='pt-8'>
-                    <b className='text-[#fc834b] font-bold'>Ques 3: What&apos;s the difference between nodejs and express js?</b>
-                    <p className='pt-2 text-justify'><b>Nodejs: </b>Node.js is a JavaScript runtime built on Chrome&apos;s V8 JavaScript engine, which allows developers to run JavaScript code on the server-side. Node.js provides a number of built-in modules that allow us to perform a variety of tasks. <br />
-                        <b>Expressjs: </b>Express.js is a web application framework for Node.js that provides a higher-level set of features for building web applications and APIs. Express.js provides a simpler, more intuitive way to handle HTTP requests and responses.</p>
+                    <b className='text-[#2cae74] font-bold'>Ques 3: What is express js? What is Nest JS?</b>
+                    <p className='pt-2 text-justify'><b>Expressjs: </b>Express.js is a lightweight and flexible web application framework for Node.js, ideal for quickly building web applications and APIs.<br />
+                        <b>Nestjs: </b>Nest.js is a progressive Node.js framework built on Express.js, providing a structured and organized approach to building scalable server-side applications, with features like dependency injection and declarative syntax.</p>
                 </div>
                 <div className='pt-8'>
-                    <b className='text-[#fc834b] font-bold'>Ques 4: What is a custom hook, and why will you create a custom hook?</b>
-                    <p className='pt-2 text-justify'>A custom hook is a reusable function in React that contains some stateful logic and can be shared between multiple components. Custom hooks enable developers to extract and reuse stateful logic that would otherwise have to be repeated in multiple components, leading to more concise and reusable code. <br />
-                        Developers create custom hooks when they need to perform some common or repetitive logic in their components, such as fetching data from an API, handling form inputs, or managing state. Custom hooks allow developers to encapsulate this logic in a single place, making it easier to reuse across multiple components.</p>
+                    <b className='text-[#2cae74] font-bold'>Ques 4: What is MongoDB aggregate and how does it work?</b>
+                    <p className='pt-2 text-justify'>MongoDB is an open source NoSQL database management program. NoSQL (Not only SQL) is used as an alternative to traditional relational databases. <br />
+                    In MongoDB, the aggregate is a powerful and flexible operation used for data aggregation and processing. It allows you to perform complex data manipulations, transformations, and computations on the documents in a collection.</p>
                 </div>
             </div>
         </div>

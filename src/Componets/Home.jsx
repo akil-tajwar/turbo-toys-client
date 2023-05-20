@@ -22,7 +22,7 @@ const Home = () => {
     };
     return (
         <div>
-            <div className='h-fit bg-[url(/public/banner.jpg)] bg-no-repeat bg-center bg-cover lg:pt-36 pt-20'>
+            <div className='h-fit bg-[url(/public/banner.jpg)] bg-no-repeat bg-center bg-cover pt-36'>
                 <div className='w-3/4 mx-auto px-5 py-40 text-white'>
                     <h1 className='lg:text-7xl text-5xl w-2/3 lg:w-1/4 pb-8'>We only sell best quality toy cars in our shop</h1>
                     <p>Download our official app</p>

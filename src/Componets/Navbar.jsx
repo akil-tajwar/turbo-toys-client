@@ -11,7 +11,7 @@ const Navbar = () => {
     }
     return (
         <div className='bg-[#0a151e] fixed w-full z-10'>
-            <div className='flex justify-between w-3/4 mx-auto p-5'>
+            <div className='flex gap-5 lg:flex-row flex-col justify-center items-center lg:justify-between w-11/12 lg:w-3/4 mx-auto p-5'>
                 <div className=''>
                     <img className='w-32' src="/public/logo.png" alt="" />
                 </div>
