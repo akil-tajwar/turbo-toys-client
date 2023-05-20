@@ -3,7 +3,12 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from './AuthProvider';
 
 const Navbar = () => {
-    const {user} = useContext(AuthContext);
+    const { user, logout } = useContext(AuthContext);
+    const handleLogout = () => {
+        logout()
+            .then(() => { })
+            .catch(error => console.log(error))
+    }
     return (
         <div className='bg-[#0a151e] fixed w-full z-10'>
             <div className='flex justify-between w-3/4 mx-auto p-5'>
@@ -16,6 +21,12 @@ const Navbar = () => {
                     <Link className='hover:text-white' to=''>All toys</Link>
                     <Link className='hover:text-white' to='/signup'>Signup</Link>
                     <Link className='hover:text-white' to='/login'>Login</Link>
+                    {
+                        user ? <span className='hover:text-white font-semibold cursor-pointer' onClick={handleLogout}>Logout</span> : <Link className='font-semibold' to='/signup'>Signup</Link>
+                    }
+                    {
+                        user ? <div className='w-10 h-10 relative'><img className='rounded-full w-full h-full object-cover border-2 border-[#78bf4d]' src={user.photoURL} title={user.displayName} alt="user photo" /></div> : <Link className='font-semibold' to='/login'>Login</Link>
+                    }
                 </div>
             </div>
         </div>
