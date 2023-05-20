@@ -11,11 +11,11 @@ const Category = () => {
         fetch('http://localhost:5000/category')
             .then(res => res.json())
             .then(data => setCategories(data))
-            .catch(error => console.log(error));
+            .catch(error => console.log(error))
     }, []);
 
     if (!categories) {
-        return <div>Loading...</div>;
+        return <div>Loading...</div>
     }
 
     return (
@@ -28,13 +28,15 @@ const Category = () => {
                 </TabList>
 
                 <TabPanel>
-                    <div className='flex gap-5'>
+                    <div className='flex gap-5 lg:flex-row flex-col'>
                         {categories[0].category.map(toy => (
                             <div className='border w-full border-slate-400 mt-3'>
-                                <div className='flex'>
-                                    <img className='p-5 w-1/2' key={toy.name} src={toy.photo} alt={toy.name} />
-                                    <div className='pt-5'>
-                                        <div className='pt-3'>
+                                <div className='flex lg:flex-row flex-col'>
+                                    <div className='p-5 lg:w-1/2 w-full'>
+                                        <img className='' key={toy.name} src={toy.photo} alt={toy.name} />
+                                    </div>
+                                    <div className='lg:pt-5 px-5 pb-5'>
+                                        <div className='lg:pt-3'>
                                             <h3 className='text-3xl text-[#1d7edd] font-semibold mb-3'>{toy.name}</h3>
                                             <div className=''>
                                                 <h5 className='text-xl'>Price: {toy.price}$</h5>
@@ -55,13 +57,15 @@ const Category = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className='flex gap-5'>
+                    <div className='flex gap-5 lg:flex-row flex-col'>
                         {categories[1].category.map(toy => (
                             <div className='border w-full border-slate-400 mt-3'>
-                                <div className='flex'>
-                                    <img className='p-5 w-1/2' key={toy.name} src={toy.photo} alt={toy.name} />
-                                    <div className='pt-5'>
-                                        <div className='pt-3'>
+                                <div className='flex lg:flex-row flex-col'>
+                                    <div className='p-5 lg:w-1/2 w-full'>
+                                        <img className='' key={toy.name} src={toy.photo} alt={toy.name} />
+                                    </div>
+                                    <div className='lg:pt-5 px-5 pb-5'>
+                                        <div className='lg:pt-3'>
                                             <h3 className='text-3xl text-[#1d7edd] font-semibold mb-3'>{toy.name}</h3>
                                             <div className=''>
                                                 <h5 className='text-xl'>Price: {toy.price}$</h5>
@@ -82,13 +86,15 @@ const Category = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className='flex gap-5'>
+                    <div className='flex gap-5 lg:flex-row flex-col'>
                         {categories[2].category.map(toy => (
                             <div className='border w-full border-slate-400 mt-3'>
-                                <div className='flex'>
-                                    <img className='p-5 w-1/2' key={toy.name} src={toy.photo} alt={toy.name} />
-                                    <div className='pt-5'>
-                                        <div className='pt-3'>
+                                <div className='flex lg:flex-row flex-col'>
+                                    <div className='p-5 lg:w-1/2 w-full'>
+                                        <img className='' key={toy.name} src={toy.photo} alt={toy.name} />
+                                    </div>
+                                    <div className='lg:pt-5 px-5 pb-5'>
+                                        <div className='lg:pt-3'>
                                             <h3 className='text-3xl text-[#1d7edd] font-semibold mb-3'>{toy.name}</h3>
                                             <div className=''>
                                                 <h5 className='text-xl'>Price: {toy.price}$</h5>

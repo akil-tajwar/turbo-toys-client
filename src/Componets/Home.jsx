@@ -22,11 +22,11 @@ const Home = () => {
     };
     return (
         <div>
-            <div className='h-fit bg-[url(/public/banner.jpg)] bg-no-repeat bg-center bg-cover pt-36'>
+            <div className='h-fit bg-[url(/public/banner.jpg)] bg-no-repeat bg-center bg-cover lg:pt-36 pt-20'>
                 <div className='w-3/4 mx-auto px-5 py-40 text-white'>
-                    <h1 className='text-7xl pb-8'>We only sell best <br /> quality toy cars in <br /> our shop</h1>
+                    <h1 className='lg:text-7xl text-5xl w-2/3 lg:w-1/4 pb-8'>We only sell best quality toy cars in our shop</h1>
                     <p>Download our official app</p>
-                    <div className='flex gap-5 pt-3 pb-20'>
+                    <div className='grid lg:grid-cols-3 grid-cols-2 w-fit gap-5 pt-3 pb-20'>
                         <button className='flex items-center bg-[#2cae74] text-black px-4 py-2 font-bold rounded'><GrApple className='text-2xl mr-1' />Download</button>
                         <button className='flex items-center bg-[#2cae74] text-black px-4 py-2 font-bold rounded'><AiFillWindows className='text-2xl mr-1' />Download</button>
                         <button className='flex items-center bg-[#2cae74] text-black px-4 py-2 font-bold rounded'><AiFillAndroid className='text-2xl mr-1' />Download</button>
@@ -34,7 +34,7 @@ const Home = () => {
                 </div>
             </div>
             <div className='w-3/4 mx-auto text-center py-20'>
-                <div className='flex gap-5'>
+                <div className='flex lg:flex-row flex-col lg:text-center lg:gap-5 gap-8'>
                     <div className='mx-auto flex flex-col justify-center items-center'>
                         <GiHandOk className='text-6xl text-[#2cae74]' />
                         <h3 className='text-4xl pb-3 font-semibold'>Best Products</h3>
@@ -54,22 +54,22 @@ const Home = () => {
             </div>
             <div className='pb-20'>
                 <h1 className='text-5xl font-bold text-[#1d7edd] text-center mb-5'>Gallery</h1>
-                <div className='grid grid-cols-3 w-3/4 mx-auto gap-5'>
+                <div className='grid lg:grid-cols-3 grid-cols-2 w-11/12 lg:w-3/4 mx-auto gap-5'>
                     {
                         toys.map(toy => <Gallery toy={toy} key={toy.id}></Gallery>)
                     }
                 </div>
             </div>
             <div>
-                <h1 className='text-5xl font-bold text-[#1d7edd] text-center'>Shop by Category</h1>
-                <div className='w-3/4 mx-auto'>
+                <h1 className='text-5xl font-bold text-[#1d7edd] mb-5 text-center'>Shop by Category</h1>
+                <div className='w-11/12 lg:w-3/4 mx-auto'>
                     <Category></Category>
                 </div>
             </div>
             <div className='mb-20'>
                 <h1 className='text-5xl font-bold text-[#1d7edd] text-center mb-5'>FAQ Section</h1>
-                <div className='flex gap-10 w-3/4 mx-auto'>
-                    <div className='w-3/4 mx-auto flex flex-col gap-5 mt-7'>
+                <div className='flex lg:flex-row flex-col-reverse gap-10 w-11/12 lg:w-3/4 mx-auto'>
+                    <div className='w-11/12 lg:w-3/4 mx-auto flex flex-col gap-5 mt-7'>
                         <div className='w-full mx-auto border-2 border-slate-200'>
                             <div className="collapse">
                                 <input type="checkbox" />
