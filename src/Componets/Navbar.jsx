@@ -15,7 +15,7 @@ const Navbar = () => {
                 <div className=''>
                     <img className='w-32' src="/public/logo.png" alt="" />
                 </div>
-                <div className='flex gap-10 text-[#2cae74] font-semibold justify-center items-center'>
+                <div className='lg:flex grid grid-cols-4 gap-x-10 lg:gap-10 text-[#2cae74] font-semibold justify-center items-center'>
                     <Link className='hover:text-white' to='/'>Home</Link>
                     <Link className='hover:text-white' to='/blog'>Blog</Link>
                     <Link className='hover:text-white' to=''>All toys</Link>
@@ -23,7 +23,7 @@ const Navbar = () => {
                         user && <Link className='hover:text-white' to=''>My toys</Link>
                     }
                     {
-                        user && <Link className='hover:text-white' to=''>Add toy</Link>
+                        user && <Link className='hover:text-white' to='/addtoy'>Add toy</Link>
                     }
                     {
                         user ? <span className='hover:text-white font-semibold cursor-pointer' onClick={handleLogout}>Logout</span> : <Link className='font-semibold hover:text-white' to='/signup'>Signup</Link>

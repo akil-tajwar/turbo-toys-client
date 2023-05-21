@@ -38,19 +38,19 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div data-aos="fade-up" className='w-3/4 mx-auto text-center py-20'>
+            <div className='w-3/4 mx-auto text-center py-20'>
                 <div className='flex lg:flex-row flex-col lg:text-center lg:gap-5 gap-8'>
-                    <div className='mx-auto flex flex-col justify-center items-center'>
+                    <div data-aos="fade-right" className='mx-auto flex flex-col justify-center items-center'>
                         <GiHandOk className='text-6xl text-[#2cae74]' />
                         <h3 className='text-4xl pb-3 font-semibold'>Best Products</h3>
                         <p className='text-slate-600'>We sell best products. We check all of our <br /> products before we sell it.</p>
                     </div>
-                    <div className='mx-auto flex flex-col justify-center items-center'>
+                    <div data-aos="fade-down" className='mx-auto flex flex-col justify-center items-center'>
                         <MdHandyman className='text-6xl text-[#2cae74]' />
                         <h3 className='text-4xl pb-3 font-semibold'>Long Lasting</h3>
                         <p className='text-slate-600'>Our products will last longer than you can <br /> ever expect.</p>
                     </div>
-                    <div className='mx-auto flex flex-col justify-center items-center'>
+                    <div data-aos="fade-left" className='mx-auto flex flex-col justify-center items-center'>
                         <FaUserFriends className='text-6xl text-[#2cae74]' />
                         <h3 className='text-4xl pb-3 font-semibold'>Professional Workers</h3>
                         <p className='text-slate-600'>Our workers are Professional, fast and very <br /> kind at their jobs.</p>
@@ -65,7 +65,7 @@ const Home = () => {
                     }
                 </div>
             </div>
-            <div>
+            <div data-aos="zoom-in-up">
                 <h1 className='text-5xl font-bold text-[#1d7edd] mb-5 text-center'>Shop by Category</h1>
                 <div className='w-11/12 lg:w-3/4 mx-auto'>
                     <Category></Category>
