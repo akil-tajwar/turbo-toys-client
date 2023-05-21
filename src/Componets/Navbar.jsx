@@ -18,7 +18,7 @@ const Navbar = () => {
                 <div className='lg:flex grid grid-cols-4 gap-x-10 lg:gap-10 text-[#2cae74] font-semibold justify-center items-center'>
                     <Link className='hover:text-white' to='/'>Home</Link>
                     <Link className='hover:text-white' to='/blog'>Blog</Link>
-                    <Link className='hover:text-white' to=''>All toys</Link>
+                    <Link className='hover:text-white' to='/alltoys'>All toys</Link>
                     {
                         user && <Link className='hover:text-white' to=''>My toys</Link>
                     }
