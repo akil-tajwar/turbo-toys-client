@@ -1,12 +1,13 @@
 import React from 'react';
 import { FaRegStar, FaStar } from 'react-icons/fa';
 import Rating from 'react-rating';
+import { Link } from 'react-router-dom';
 
 const ToyCard = ({ toy }) => {
     const { url, tname, sname, email, category, price, rating, quantity } = toy;
     return (
         <div>
-            <div className='border w-full border-slate-400 mt-3'>
+            <div className='border w-full border-slate-400'>
                 <div className='flex flex-col'>
                     <div className='p-5 w-full h-96'>
                         <img className='w-full h-full object-cover' key={toy.name} src={toy.url} alt={toy.name} />
@@ -28,7 +29,7 @@ const ToyCard = ({ toy }) => {
                                 ></Rating></p>
                             </div>
                         </div>
-                        <button className='px-3 w-full text-white text-xl bg-[#2cae74] py-2 mt-5 font-semibold'>View Details</button>
+                        <Link to={`toy/${toy._id}`}><button className='px-3 w-full text-white text-xl bg-[#2cae74] py-2 mt-5 font-semibold'>View Details</button></Link>
                     </div>
                 </div>
             </div>
