@@ -2,8 +2,11 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import ToyCard from './ToyCard';
 
-const Alltoys = ({ toys }) => {
+const Alltoys = () => {
     const allToys = useLoaderData();
+    if (!allToys) {
+        return <div>Loading...</div>;
+    }
     return (
         <div className='lg:pt-52 pt-72 mb-20'>
             <h1 className='text-5xl font-bold text-[#1d7edd] text-center mb-5'>All Toys</h1>
