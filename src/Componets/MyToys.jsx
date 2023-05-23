@@ -56,6 +56,13 @@ const MyToys = () => {
     return (
         <div className='pt-56 pb-20'>
             <h1 className='text-5xl text-center font-semibold pb-5 text-[#1d7edd]'>My Toys</h1>
+            <div className='w-3/4 mx-auto mb-5'>
+                <select className='border border-slate-400 px-4 py-1'>
+                    <option>Sort by</option>
+                    <option>High price</option>
+                    <option>Low price</option>
+                </select>
+            </div>
             <div className="border w-3/4 h-fit mx-auto border-slate-400">
                 <div className='font-semibold grid grid-cols-9 justify-center items-center p-5'>
                     <p className='font-semibold'>Sl no.</p>

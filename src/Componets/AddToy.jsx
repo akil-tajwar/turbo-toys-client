@@ -39,7 +39,7 @@ const AddToy = () => {
     return (
         <div className='pt-40 pb-14'>
             <div className='mx-auto lg:w-fit w-11/12 border-slate-200 border p-8 mt-20 mb-4'>
-            <h2 className='text-4xl text-center font-semibold mb-3'>Add Toy</h2>
+            <h2 className='text-4xl text-center font-semibold mb-3'>Add Your Toy</h2>
                 <form onSubmit={addToy}>
                     <div className='pb-2'>
                         <label htmlFor="password">Toy Photo URL</label><br />
