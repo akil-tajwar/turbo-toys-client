@@ -9,7 +9,7 @@ const MyToys = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        const url = `https://turbo-toys-server-akil-tajwar.vercel.app/mytoys?email=${user.email}`;
+        const url = `https://turbo-toys-server-xi.vercel.app/mytoys?email=${user.email}`;
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -32,7 +32,7 @@ const MyToys = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://turbo-toys-server-akil-tajwar.vercel.app/mytoys/${_id}`, {
+                fetch(`https://turbo-toys-server-xi.vercel.app/mytoys/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

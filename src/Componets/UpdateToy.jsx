@@ -20,7 +20,7 @@ const UpdateToy = () => {
         const description = form.description.value;
 
         const updatedToy = { _id, url, tname, sname, email, category, price, rating, quantity, description };
-        fetch(`https://turbo-toys-server-akil-tajwar.vercel.app/mytoys/${_id}`, {
+        fetch(`https://turbo-toys-server-xi.vercel.app/mytoys/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

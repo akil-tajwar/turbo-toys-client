@@ -12,7 +12,7 @@ import Category from './Category';
 const Home = () => {
     const [toys, setToys] = useState([]);
     useEffect(() => {
-        fetch('https://turbo-toys-server-akil-tajwar.vercel.app/toy')
+        fetch('https://turbo-toys-server-xi.vercel.app/toy')
             .then(res => res.json())
             .then(data => setToys(data))
             .catch(error => console.log(error))
