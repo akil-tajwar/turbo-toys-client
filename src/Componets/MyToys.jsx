@@ -35,7 +35,7 @@ const MyToys = () => {
                 </div>
             </div>
             {
-                myToys.map(mytoy => <MyToyElements mytoy={mytoy} key={mytoy._id}></MyToyElements>)
+                myToys.map(myToyElements => <MyToyElements myToyElements={myToyElements} key={myToyElements._id}></MyToyElements>)
             }
         </div>
     );

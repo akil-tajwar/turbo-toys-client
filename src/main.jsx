@@ -17,6 +17,7 @@ import ToyDetails from './Componets/ToyDetails';
 import Error from './Componets/Error';
 import MyToys from './Componets/MyToys';
 import PrivateRoute from './Componets/PrivateRoute';
+import UpdateToy from './Componets/UpdateToy';
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,11 @@ const router = createBrowserRouter([
       {
         path: 'mytoys',
         element: <PrivateRoute><MyToys></MyToys></PrivateRoute>
+      },
+      {
+        path: 'updatetoy',
+        element: <UpdateToy></UpdateToy>,
+        loader: () => fetch()
       }
     ]
   },
