@@ -13,7 +13,7 @@ const Navbar = () => {
         <div className='bg-[#0a151e] fixed w-full z-10'>
             <div className='flex gap-5 lg:flex-row flex-col justify-center items-center lg:justify-between w-11/12 lg:w-3/4 mx-auto p-5'>
                 <div className=''>
-                    <img className='w-32' src="/public/logo.png" alt="" />
+                    <img className='w-32' src="/logo.png" alt="" />
                 </div>
                 <div className='lg:flex grid grid-cols-4 gap-x-10 lg:gap-10 text-[#2cae74] font-semibold justify-center items-center'>
                     <Link className='hover:text-white' to='/'>Home</Link>
