@@ -147,7 +147,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div data-aos="fade-left" className=''>
-                        <img src="/public/faq.svg" alt="" />
+                        <img src="/faq.svg" alt="" />
                     </div>
                 </div>
             </div>
