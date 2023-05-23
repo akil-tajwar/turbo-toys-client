@@ -20,7 +20,7 @@ const Navbar = () => {
                     <Link className='hover:text-white' to='/blog'>Blog</Link>
                     <Link className='hover:text-white' to='/alltoys'>All toys</Link>
                     {
-                        user && <Link className='hover:text-white' to=''>My toys</Link>
+                        user && <Link className='hover:text-white' to='mytoys'>My toys</Link>
                     }
                     {
                         user && <Link className='hover:text-white' to='/addtoy'>Add toy</Link>

@@ -15,6 +15,8 @@ import AddToy from './Componets/AddToy';
 import Alltoys from './Componets/Alltoys';
 import ToyDetails from './Componets/ToyDetails';
 import Error from './Componets/Error';
+import MyToys from './Componets/MyToys';
+import PrivateRoute from './Componets/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -49,7 +51,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/:_id',
-        element: <ToyDetails></ToyDetails>,
+        element: <ToyDetails></ToyDetails>
+      },
+      {
+        path: 'mytoys',
+        element: <PrivateRoute><MyToys></MyToys></PrivateRoute>
       }
     ]
   },
