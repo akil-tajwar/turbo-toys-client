@@ -48,7 +48,7 @@ const router = createBrowserRouter([
       {
         path: 'alltoys',
         element: <Alltoys></Alltoys>,
-        loader: () => fetch('http://localhost:5000/newtoy')
+        loader: () => fetch('https://turbo-toys-server-akil-tajwar.vercel.app/newtoy')
       },
       {
         path: '/:_id',
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
       {
         path: 'updatetoy',
         element: <UpdateToy></UpdateToy>,
-        loader: ({params}) => fetch(`http://localhost:5000/mytoys/${params._id}`)
+        loader: ({params}) => fetch(`https://turbo-toys-server-akil-tajwar.vercel.app/mytoys/${params._id}`)
       }
     ]
   },

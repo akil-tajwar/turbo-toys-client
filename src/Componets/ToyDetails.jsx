@@ -8,7 +8,7 @@ const ToyDetails = () => {
     const [toyData, setToyData] = useState(null);
 
     useEffect(() => {
-        fetch('http://localhost:5000/newtoy')
+        fetch('https://turbo-toys-server-akil-tajwar.vercel.app/newtoy')
             .then(res => res.json())
             .then(data => {
                 const toyData = data.find(toy => toy._id === toyDetails._id);

@@ -16,7 +16,7 @@ const AddToy = () => {
         const description = form.description.value;
 
         const newToy = {url, tname, sname, email, category, price, rating, quantity, description}
-        fetch('http://localhost:5000/newtoy', {
+        fetch('https://turbo-toys-server-akil-tajwar.vercel.app/newtoy', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

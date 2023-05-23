@@ -8,7 +8,7 @@ const Category = () => {
     const [categories, setCategories] = useState(null);
 
     useEffect(() => {
-        fetch('http://localhost:5000/category')
+        fetch('https://turbo-toys-server-akil-tajwar.vercel.app/category')
             .then(res => res.json())
             .then(data => setCategories(data))
             .catch(error => console.log(error))
