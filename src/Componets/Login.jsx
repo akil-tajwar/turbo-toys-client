@@ -73,10 +73,10 @@ const Login = () => {
                     </div>
                     <button className='w-full bg-[#2cae74] text-white font-semibold p-2 mt-4 mb-3'>Login</button><br />
                 </form>
-                <p className='text-center'>--------- or ---------</p>
+                {/* <p className='text-center'>--------- or ---------</p>
                 <div className='flex gap-2 mb-3'>
                     <button onClick={googleLogin} className='w-full bg-[#2cae74] text-white font-semibold p-2 mt-3'>Google</button>
-                </div>
+                </div> */}
                 <div className='text-center'>
                     <small>New to Turbo Toy Car? <Link to='/signup' className='text-[#1d7edd] font-semibold'>Create new account</Link></small>
                 </div>

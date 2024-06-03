@@ -18,6 +18,7 @@ import Error from './Componets/Error';
 import MyToys from './Componets/MyToys';
 import PrivateRoute from './Componets/PrivateRoute';
 import UpdateToy from './Componets/UpdateToy';
+import Cart from './Componets/Cart.jsx';
 
 const router = createBrowserRouter([
   {
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
       {
         path: 'mytoys',
         element: <PrivateRoute><MyToys></MyToys></PrivateRoute>
+      },
+      {
+        path: 'cart',
+        element: <PrivateRoute><Cart></Cart></PrivateRoute>
       },
       {
         path: 'updatetoy',

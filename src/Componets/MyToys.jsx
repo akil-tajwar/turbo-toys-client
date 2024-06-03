@@ -56,13 +56,13 @@ const MyToys = () => {
     return (
         <div className='pt-56 pb-20'>
             <h1 className='text-5xl text-center font-semibold pb-5 text-[#1d7edd]'>My Toys</h1>
-            <div className='w-3/4 mx-auto mb-5'>
+            {/* <div className='w-3/4 mx-auto mb-5'>
                 <select className='border border-slate-400 px-4 py-1'>
                     <option>Sort by</option>
                     <option>High price</option>
                     <option>Low price</option>
                 </select>
-            </div>
+            </div> */}
             <div className="border w-3/4 h-fit mx-auto border-slate-400">
                 <div className='font-semibold grid grid-cols-9 justify-center items-center p-5'>
                     <p className='font-semibold'>Sl no.</p>
@@ -72,11 +72,11 @@ const MyToys = () => {
                     <p className='font-semibold'>Sub Category</p>
                     <p className='font-semibold'>Price</p>
                     <p className='font-semibold'>Quantity</p>
-                    <p className='font-semibold flex gap-2 justify-start'>Update/Delete</p>
+                    <p className='font-semibold flex gap-2 justify-start'>Delete</p>
                 </div>
             </div>
             {
-                myToys.map(myToyElements => <MyToyElements handleDelete={handleDelete} myToyElements={myToyElements} key={myToyElements._id}></MyToyElements>)
+                myToys.map((myToyElements, index) => <MyToyElements index={index} handleDelete={handleDelete} myToyElements={myToyElements} key={myToyElements._id}></MyToyElements>)
             }
         </div>
     );

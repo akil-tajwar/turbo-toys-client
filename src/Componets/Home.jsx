@@ -22,12 +22,14 @@ const Home = () => {
     const handleButtonClick = () => {
         setButtonText(prevText => (prevText === "+" ? "-" : "+"));
     };
+
     useEffect(()=> {
         Aos.init({duration: 2000});
     }, [])
+    
     return (
         <div>
-            <div data-aos="fade-down" className='h-fit bg-[url(/public/banner.jpg)] bg-no-repeat bg-center bg-cover pt-36'>
+            <div data-aos="fade-down" className='h-fit overflow-x-hidden bg-[url(/public/banner.jpg)] bg-no-repeat bg-center bg-cover pt-36'>
                 <div data-aos="fade-right" className='w-3/4 mx-auto px-5 py-40 text-white'>
                     <h1 className='lg:text-7xl text-5xl w-2/3 lg:w-1/4 pb-8'>We only sell best quality toy cars in our shop</h1>
                     <p>Download our official app</p>
@@ -40,7 +42,7 @@ const Home = () => {
             </div>
             <div className='w-3/4 mx-auto text-center py-20'>
                 <div className='flex lg:flex-row flex-col lg:text-center lg:gap-5 gap-8'>
-                    <div data-aos="fade-right" className='mx-auto flex flex-col justify-center items-center'>
+                    <div data-aos="fade-right" className='mx-auto overflow-x-hidden flex flex-col justify-center items-center'>
                         <GiHandOk className='text-6xl text-[#2cae74]' />
                         <h3 className='text-4xl pb-3 font-semibold'>Best Products</h3>
                         <p className='text-slate-600'>We sell best products. We check all of our <br /> products before we sell it.</p>
@@ -57,7 +59,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div data-aos="fade-up" className='pb-20'>
+            <div data-aos="fade-up" className='pb-20 overflow-x-hidden'>
                 <h1 className='text-5xl font-bold text-[#1d7edd] text-center mb-5'>Gallery</h1>
                 <div className='grid lg:grid-cols-3 grid-cols-2 w-11/12 lg:w-3/4 mx-auto gap-5'>
                     {
@@ -65,7 +67,7 @@ const Home = () => {
                     }
                 </div>
             </div>
-            <div data-aos="zoom-in-up">
+            <div data-aos="zoom-in-up overflow-x-hidden">
                 <h1 className='text-5xl font-bold text-[#1d7edd] mb-5 text-center'>Shop by Category</h1>
                 <div className='w-11/12 lg:w-3/4 mx-auto'>
                     <Category></Category>
@@ -74,7 +76,7 @@ const Home = () => {
             <div className='mb-20'>
                 <h1 className='text-5xl font-bold text-[#1d7edd] text-center mb-5'>FAQ Section</h1>
                 <div className='flex lg:flex-row flex-col-reverse gap-10 w-11/12 lg:w-3/4 mx-auto'>
-                    <div data-aos="fade-right" className='w-11/12 lg:w-3/4 mx-auto flex flex-col gap-5 mt-7'>
+                    <div data-aos="fade-right" className='w-11/12 overflow-x-hidden lg:w-3/4 mx-auto flex flex-col gap-5 mt-7'>
                         <div className='w-full mx-auto border-2 border-slate-200'>
                             <div className="collapse">
                                 <input type="checkbox" />
@@ -146,7 +148,7 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div data-aos="fade-left" className=''>
+                    <div data-aos="fade-left" className='overflow-x-hidden'>
                         <img src="/faq.svg" alt="" />
                     </div>
                 </div>

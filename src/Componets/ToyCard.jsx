@@ -19,7 +19,7 @@ const ToyCard = ({ toy }) => {
                             <div className=''>
                                 <p className=''>Price: {price}$</p>
                                 <p className=''>Sub Category: {category}</p>
-                                <p className=''>Abailable Quantity: {quantity}</p>
+                                <p className=''>Available Quantity: {quantity}</p>
                                 <p className=''>Rating: <Rating
                                     readonly
                                     placeholderRating={rating}

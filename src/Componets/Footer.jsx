@@ -38,7 +38,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='bg-[#0a151e] text-[#2cae74] p-3 text-center'>
-                <p>© Turbo Toy Cars 2023 | Created by <span>Akil Tajwar</span></p>
+                <p>© Turbo Toy Cars 2023 | Created by <span>Sadia Moontahin</span></p>
             </div>
         </div>
     );

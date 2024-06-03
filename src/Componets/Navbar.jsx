@@ -17,7 +17,7 @@ const Navbar = () => {
                 </div>
                 <div className='lg:flex grid grid-cols-4 gap-x-10 lg:gap-10 text-[#2cae74] font-semibold justify-center items-center'>
                     <Link className='hover:text-white' to='/'>Home</Link>
-                    <Link className='hover:text-white' to='/blog'>Blog</Link>
+                    {/* <Link className='hover:text-white' to='/blog'>Blog</Link> */}
                     <Link className='hover:text-white' to='/alltoys'>All toys</Link>
                     {
                         user && <Link className='hover:text-white' to='mytoys'>My toys</Link>
@@ -27,6 +27,9 @@ const Navbar = () => {
                     }
                     {
                         user ? <span className='hover:text-white font-semibold cursor-pointer' onClick={handleLogout}>Logout</span> : <Link className='font-semibold hover:text-white' to='/signup'>Signup</Link>
+                    }
+                    {
+                        user && <Link className='hover:text-white' to='/cart'>Cart</Link>
                     }
                     {
                         user ? <div className='w-10 h-10 relative'><img className='rounded-full w-full h-full object-cover border-2 border-[#78bf4d]' src={user.photoURL} title={user.displayName} alt="user photo" /></div> : <Link className='font-semibold hover:text-white' to='/login'>Login</Link>

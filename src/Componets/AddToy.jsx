@@ -1,21 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Swal from 'sweetalert2'
+import { AuthContext } from './AuthProvider';
 
 const AddToy = () => {
+    const { user } = useContext(AuthContext);
     const addToy = (e) => {
         e.preventDefault();
         const form = e.target;
         const url = form.photo.value;
         const tname = form.tname.value;
-        const sname = form.sname.value;
-        const email = form.email.value;
+        const sname = user?.displayName;
+        const email = user?.email;
         const category = form.category.value;
         const price = form.price.value;
         const rating = form.rating.value;
         const quantity = form.quantity.value;
         const description = form.description.value;
+        const addToCart = false;
 
-        const newToy = {url, tname, sname, email, category, price, rating, quantity, description}
+        const newToy = {url, tname, sname, email, category, price, rating, quantity, description, addToCart}
         fetch('https://turbo-toys-server-xi.vercel.app/newtoy', {
             method: 'POST',
             headers: {
@@ -49,7 +52,7 @@ const AddToy = () => {
                         <label htmlFor="email">Toy Name</label><br />
                         <input className='bg-[#f5f5f5] p-2 border-slate-300 border w-full' type="text" name="tname" id="" required />
                     </div>
-                    <div className='grid grid-cols-2 gap-5'>
+                    {/* <div className='grid grid-cols-2 gap-5'>
                         <div className='pb-2'>
                             <label htmlFor="email">Seller Name</label><br />
                             <input className='bg-[#f5f5f5] p-2 border-slate-300 border w-full' type="text" name="sname" id="" required />
@@ -58,7 +61,7 @@ const AddToy = () => {
                             <label htmlFor="email">Seller Email</label><br />
                             <input className='bg-[#f5f5f5] p-2 border-slate-300 border w-full' type="email" name="email" id="" required />
                         </div>
-                    </div>
+                    </div> */}
                     <div className='pb-2'>
                         <label htmlFor="email">Sub Category</label><br />
                         <input className='bg-[#f5f5f5] p-2 border-slate-300 border w-full' type="text" name="category" id="" required />
